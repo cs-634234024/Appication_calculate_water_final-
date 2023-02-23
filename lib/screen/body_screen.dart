@@ -126,7 +126,12 @@ class _BodyScreenState extends State<BodyScreen> {
         const SizedBox(
           height: 5,
         ),
-        const ButtonWidget()
+        ButtonWidget(
+          service: service,
+          changesize: changesize,
+          type: type,
+          water: _currenSliderValue,
+        )
       ],
     );
   }

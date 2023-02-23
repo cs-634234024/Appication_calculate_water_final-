@@ -1,14 +1,32 @@
+import 'package:calculate_water_2/screen/result_sreen.dart';
 import 'package:flutter/material.dart';
 
 class ButtonWidget extends StatelessWidget {
-  const ButtonWidget({super.key});
+  final int type;
+  final int service;
+  final int changesize;
+  final double water;
+  const ButtonWidget(
+      {super.key,
+      required this.type,
+      required this.service,
+      required this.changesize,
+      required this.water});
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return GestureDetector(
         onTap: () {
-          print('test');
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => ResultScreen(
+                    service: service,
+                    size: changesize,
+                    type: type,
+                    water: water),
+              ));
         },
         child: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -22,7 +40,7 @@ class ButtonWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: const [
                 Text(
-                  'calculater',
+                  'Calculater',
                   style: TextStyle(
                       fontSize: 30,
                       color: Colors.white,
