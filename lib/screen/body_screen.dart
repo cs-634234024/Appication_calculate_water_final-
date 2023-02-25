@@ -428,6 +428,7 @@ class selectSize extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   FloatingActionButton(
+                    heroTag: null,
                     onPressed: () => onclick(type - 1),
                     child: Text(
                       '-',
@@ -438,6 +439,7 @@ class selectSize extends StatelessWidget {
                     width: 15,
                   ),
                   FloatingActionButton(
+                    heroTag: null,
                     onPressed: () => onclick(type + 1),
                     child: Text('+', style: TextStyle(fontSize: 30)),
                   )
