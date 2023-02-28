@@ -7,6 +7,8 @@ class Calculate {
       result = test + 50;
     } else if (type == 1 && service == 2) {
       result == test + 100;
+    } else if (type == 1 && service == 3) {
+      result == test + 100;
     }
 
     return result;
